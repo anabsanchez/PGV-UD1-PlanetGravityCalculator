@@ -26,6 +26,7 @@ public class FileHelper {
 
             System.out.println("No se pudo leer el archivo: " + filePath);
         }
+        
         return lines;
     }
 
@@ -33,13 +34,15 @@ public class FileHelper {
 
         String result = "?";
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(file, StandardCharsets.UTF_8))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
 
             result = reader.readLine();
+            reader.close();
+            System.out.println(result);
 
         } catch (IOException e) {
 
-            System.out.println("No se pudo obtener el resultado del archivo.");
+            System.out.println("No se pudo obtener el resultado del archivo: " + file.getName());
         }
         return Double.parseDouble(result);
     }
