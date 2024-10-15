@@ -9,6 +9,12 @@ import java.util.ArrayList;
 
 public class FileHelper {
 
+    /**
+     * Reads all lines from a specified file and returns them as an ArrayList of strings.
+     * 
+     * @param filePath Is the path to the file to be read.
+     * @return An ArrayList containing each line of the file as a separate string.
+     */
     public static ArrayList<String> getAllLines(String filePath) {
 
         ArrayList<String> lines = new ArrayList<>();
@@ -30,6 +36,12 @@ public class FileHelper {
         return lines;
     }
 
+    /**
+     * Reads the gravity result from the specified file and prints it to the console.
+     * 
+     * @param file Is the file from which to read the gravity result.
+     * @return A string representing the gravity result, or "?" if the file cannot be read.
+     */
     public static String getGravity(File file) {
 
         String result = "?";
