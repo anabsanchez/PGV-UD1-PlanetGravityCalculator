@@ -12,11 +12,10 @@ public class ProcessLauncher {
             "java", GRAVITY_CALCULATOR_ROUTE, name, mass, radius
         );
 
-        File outputFile = new File("files/output/" + fileName);
+        File outputFile = new File("src/net/salesianos/files/output/" + fileName);
 
-        System.out.println("Entro");
         processBuilder.redirectOutput(outputFile);
-        processBuilder.redirectError(new File("files/errors/Error.txt"));
+        processBuilder.redirectError(new File("src/net/salesianos/files/errors/Error.txt"));
 
         return processBuilder.start();
     }

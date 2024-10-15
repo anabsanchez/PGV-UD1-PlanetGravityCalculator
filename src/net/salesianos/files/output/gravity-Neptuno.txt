@@ -1,0 +1,1 @@
+Gravedad calculada para Neptuno: 11.273506m/s²
