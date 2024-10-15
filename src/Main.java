@@ -16,8 +16,8 @@ public class Main {
             String mass = planetData[1];
             String radius = planetData[2];
 
-            Process subprocess = ProcessLauncher.initGravityCalculator(name, mass, radius, "gravity-" + name + ".txt");
-            calculatorProcesses.add(subprocess);
+            Process process = ProcessLauncher.initGravityCalculator(name, mass, radius, "gravity-" + name + ".txt");
+            calculatorProcesses.add(process);
         }
 
         for (Process process : calculatorProcesses) {
@@ -36,9 +36,8 @@ public class Main {
             File file = new File("./files/output/gravity-" + name + ".txt");
 
             if (file.exists()) {
-                double gravity = FileHelper.getGravity(file);
-                System.out.println("Gravedad calculada para " + name + ": " + gravity + " m/s²");
-                file.delete(); 
+                FileHelper.getGravity(file);
+                //file.delete(); 
             } else {
                 System.out.println("No se encontró el archivo de salida para " + name);
             }

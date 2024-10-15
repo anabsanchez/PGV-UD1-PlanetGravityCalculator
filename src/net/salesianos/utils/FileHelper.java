@@ -30,7 +30,7 @@ public class FileHelper {
         return lines;
     }
 
-    public static double getGravity(File file) {
+    public static String getGravity(File file) {
 
         String result = "?";
 
@@ -44,6 +44,6 @@ public class FileHelper {
 
             System.out.println("No se pudo obtener el resultado del archivo: " + file.getName());
         }
-        return Double.parseDouble(result);
+        return result;
     }
 }

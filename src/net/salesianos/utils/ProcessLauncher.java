@@ -6,23 +6,18 @@ import java.io.IOException;
 public class ProcessLauncher {
     private static final String GRAVITY_CALCULATOR_ROUTE = "src/net/salesianos/programs/PlanetGravityCalculator.java";
 
-    public static Process initGravityCalculator(String name, String mass, String radius, String outputPath) throws IOException {
+    public static Process initGravityCalculator(String name, String mass, String radius, String fileName) throws IOException {
 
         ProcessBuilder processBuilder = new ProcessBuilder(
             "java", GRAVITY_CALCULATOR_ROUTE, name, mass, radius
         );
 
-        Process javaProcess = null;
+        File outputFile = new File("files/output/" + fileName);
 
-        try {
-            File newFile = new File("files/output/" + outputPath);
-            processBuilder.redirectOutput(newFile);
-            System.out.println("Entro");
-            javaProcess = processBuilder.start();
-        } catch (IOException e) {
-            processBuilder.redirectError(new File("files/errors/Error.txt"));
-        }
+        System.out.println("Entro");
+        processBuilder.redirectOutput(outputFile);
+        processBuilder.redirectError(new File("files/errors/Error.txt"));
 
-        return javaProcess;
+        return processBuilder.start();
     }
 }

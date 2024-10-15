@@ -3,7 +3,7 @@ package programs;
 public class PlanetGravityCalculator {
     
     // Gravitational constant
-    private static final double G = 6.67430e-11; // m³/(kg·s²)
+    private static final float G = 6.67430e-11F; // m³/(kg·s²)
 
     public static void main(String[] args) {
 
@@ -15,12 +15,13 @@ public class PlanetGravityCalculator {
 
         try {
 
-            double mass = Double.parseDouble(args[1]);
-            double radius = Double.parseDouble(args[2]); 
+            String name = args[0];
+            float mass = Float.parseFloat(args[1]);
+            float radius = Float.parseFloat(args[2]); 
 
-            double gravity = G * (mass / (radius * radius));
+            float gravity = G * (mass / (radius * radius));
 
-            System.out.println(gravity);
+            System.out.println("Gravedad calculada para " + name + ": " + gravity + "m/s²");
 
         } catch (NumberFormatException e) {
 

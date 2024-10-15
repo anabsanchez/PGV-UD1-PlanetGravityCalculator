@@ -1,0 +1,1 @@
+Gravedad calculada para Marte: 3.727977m/s²
