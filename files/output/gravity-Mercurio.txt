@@ -1,0 +1,1 @@
+Gravedad calculada para Mercurio: 3.7016172m/s²
