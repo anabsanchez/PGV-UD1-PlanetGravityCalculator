@@ -1,16 +1,16 @@
-# Documentación - Planet Gravity Calculator
+# Documentation - Planet Gravity Calculator
 <br>
 
-## Clases de Utilidad:
+## Utility Classes:
 ### [FileHelper](./classes/file_helper.md)
 ### [ProcessLauncher](./classes/process_launcher.md)
 <br>
 
-## Clase Principal:
+## Main Class:
 ### [PlanetGravityCalculator](./classes/planet_gravity_calculator.md)
 <br>
 
-## Clase Ejecutable:
+## Executable Class:
 ### [Main](./classes/main.md)
 <br>
 
