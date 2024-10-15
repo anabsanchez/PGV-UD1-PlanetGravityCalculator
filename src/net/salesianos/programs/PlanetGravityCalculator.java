@@ -5,6 +5,12 @@ public class PlanetGravityCalculator {
     // Gravitational constant
     private static final float G = 6.67430e-11F; // m³/(kg·s²)
 
+    /**
+     * Main method that calculates the gravitational acceleration on a planet 
+     * based on its mass and radius.
+     * 
+     * @param args Command-line arguments: name of the planet, mass (kg), and radius (m).
+     */
     public static void main(String[] args) {
 
         if (args.length < 1) {

@@ -4,7 +4,18 @@ import utils.FileHelper;
 import utils.ProcessLauncher;
 import java.io.File;
 
+/**
+ * The Main class orchestrates the calculation of gravitational acceleration
+ * for a list of planets by leveraging external processes.
+ */
 public class Main {
+    /**
+     *  The main method that reads planet data, launches gravity calculation processes, 
+     *  waits for their completion, and displays the results.
+     * 
+     * @param args Command-line arguments (not used).
+     * @throws Exception If any file I/O or process-related error occurs.
+     */
     public static void main(String[] args) throws Exception {
 
         ArrayList<String> planets = FileHelper.getAllLines("src/net/salesianos/files/input/planets.txt");
