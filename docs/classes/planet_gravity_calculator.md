@@ -3,7 +3,6 @@ The PlanetGravityCalculator class calculates the gravitational acceleration of a
 ​
 It also handles various exceptions, such as incorrect input format, and prints the calculated gravity to the console.
 <br><br>
-<hr>
 
 ## Methods
 #### - main(String[] args):
@@ -12,6 +11,5 @@ It also handles various exceptions, such as incorrect input format, and prints t
 Main method that calculates the gravitational acceleration on a planet based on its mass and radius.
 
 <br><br>
-<hr>
 
 [<- Volver](../documentation.md)
