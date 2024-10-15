@@ -7,7 +7,7 @@ import java.io.File;
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        ArrayList<String> planets = FileHelper.getAllLines("./files/input/planets.txt");
+        ArrayList<String> planets = FileHelper.getAllLines("src/net/salesianos/files/input/planets.txt");
         ArrayList<Process> calculatorProcesses = new ArrayList<>();
 
         for (int i = 0; i < planets.size(); i++) {
@@ -28,21 +28,19 @@ public class Main {
             }
         }
 
-        System.out.println("Resultados de los cálculos de gravedad:");
+        System.out.println("\nResultados de los cálculos de gravedad:\n");
         
         for (String planet : planets) {
             String name = planet.split(",")[0];
-            System.out.println(name);
-            File file = new File("./files/output/gravity-" + name + ".txt");
+            File file = new File("src/net/salesianos/files/output/gravity-" + name + ".txt");
 
             if (file.exists()) {
                 FileHelper.getGravity(file);
-                //file.delete(); 
             } else {
                 System.out.println("No se encontró el archivo de salida para " + name);
             }
         }
 
-        System.out.println("Saliendo del programa...");
+        System.out.println("\nSaliendo del programa...");
     }
 }

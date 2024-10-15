@@ -1,0 +1,1 @@
+Gravedad calculada para Saturno: 11.185617m/s²
